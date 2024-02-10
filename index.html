@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's Day Card</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #14399d, #e36b10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card-container {
+    position: relative;
+    max-width: 90%;
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(227, 23, 53, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #1475b6;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #431cae;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color:#42e42d;
+  }
+
+  .rose {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    animation: rotateRose 7s linear infinite;
+  }
+
+  @keyframes rotateRose {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rose:nth-child(1) {
+    top: -10px;
+    left: 50px;
+  }
+
+  .rose:nth-child(2) {
+    top: 80px;
+    left: -10px;
+  }
+
+  .rose:nth-child(3) {
+    bottom: -10px;
+    left: 50px;
+  }
+
+  .rose:nth-child(4) {
+    top: 80px;
+    right: -10px;
+  }
+
+  @media (max-width: 650px) {
+    .card-container {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="card-container">
+  <h1 style="color: aqua;">Happy Valentine's Day!</h1>
+  <p>You make my heart flutter like nothing else in this world.</p>
+  <button id="loveButton">Click Here</button>
+  <p id="message"></p>
+</div>
+<img src="./download.jpeg" class="rose" alt="Rose">
+<img src="./download.jpeg" class="rose" alt="Rose">
+<img src="./download.jpeg" class="rose" alt="Rose">
+<img src="./download.jpeg" class="rose" alt="Rose">
+
+<script>
+  document.getElementById("loveButton").addEventListener("click", function() {
+    document.getElementById("message").innerText = "I love you Hasini";
+  });
+</script>
+</body>
+</html>
